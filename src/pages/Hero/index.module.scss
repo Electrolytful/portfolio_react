@@ -1,0 +1,75 @@
+@import '../../sass/variables.scss';
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    user-select: none;
+
+    &__background {
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to right bottom,
+        rgba($color-primary-dark, .8),
+        rgba($color-primary-light, .8)),
+        url(images/hero_bg.jpg);
+        background-size: cover;
+        background-position: top;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(.6rem);
+        }
+    }
+
+    &__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        img {
+            max-width: 20rem;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        h1 {
+            font-weight: 400;
+        }
+
+        h2 {
+            font-weight: 100;
+            letter-spacing: .6rem;
+        }
+    }
+
+    &__icons {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+        font-size: 4rem;
+
+        li {
+            transition: all .4s;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.3);
+            }
+        }
+    }
+}
