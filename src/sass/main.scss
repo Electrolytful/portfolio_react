@@ -20,14 +20,26 @@ body {
     color: $color-white;
 }
 
+// default styles for headings
 h1 {
     font-size: 6rem;
+    font-weight: 300;
 }
 
 h2 {
     font-size: 3.5rem;
+    font-weight: 100;
 }
 
 h3 {
     font-size: 2rem;
+    font-weight: 100;
+}
+
+// wrapper for scrolling context - used for the parallax effect in header
+.wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 1rem;
 }
