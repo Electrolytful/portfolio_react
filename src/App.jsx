@@ -1,6 +1,7 @@
 import {
   Hero,
   About,
+  Projects,
 } from "./pages";
 
 export default function App() {
@@ -8,6 +9,7 @@ export default function App() {
     <div className="wrapper">
       <Hero />
       <About />
+      <Projects />
     </div>
   );
 }

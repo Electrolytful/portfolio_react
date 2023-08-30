@@ -1,6 +1,37 @@
 @import '../../sass/variables.scss';
 
 .about {
-    height: 100vh;
-    background-color: $color-grey-light;
+    height: 70vh;
+    background-color: $color-grey-dark;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &_content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        hr {
+            min-width: 35rem;
+            transform: rotate(90deg);
+        }
+    }
+
+    &_title {
+
+        h2 {
+            font-size: 8rem;
+        }
+    }
+
+    &_description {
+        max-width: 40%;
+
+        p {
+            font-size: 2rem;
+        }
+    }
 }

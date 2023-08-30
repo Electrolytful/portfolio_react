@@ -36,6 +36,15 @@ h3 {
     font-weight: 100;
 }
 
+span {
+    color: $color-primary;
+
+    &.block {
+        display: block;
+        text-align: right;
+    }
+}
+
 // wrapper for scrolling context - used for the parallax effect in header
 .wrapper {
     height: 100vh;
