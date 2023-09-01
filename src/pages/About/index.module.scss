@@ -21,9 +21,15 @@
     }
 
     &_title {
+        text-align: center;
 
         h2 {
             font-size: 8rem;
+
+            span {
+                display: block;
+                text-align: right;
+            }
         }
     }
 
@@ -32,6 +38,68 @@
 
         p {
             font-size: 2rem;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .about {
+
+        &_content {
+
+            hr {
+                min-width: 25rem;
+            }
+        }
+
+        &_title {
+
+            h2 {
+                font-size: 5rem;
+            }
+        }
+
+        &_description {
+
+            p {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .about {
+
+        &_content {
+            flex-direction: column;
+
+            hr {
+                transform: rotate(0);
+                min-width: 25rem;
+                margin-bottom: 4rem;
+            }
+        }
+
+        &_title {
+            margin-bottom: 2rem;
+
+            h2 {
+                font-size: 5rem;
+
+                span {
+                    display: inline;
+                }
+            }
+        }
+
+        &_description {
+            max-width: 80%;
+
+            p {
+                font-size: 1.5rem;
+                text-align: center;
+            }
         }
     }
 }
