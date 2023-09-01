@@ -10,7 +10,7 @@ export default function About() {
           <hr />
           <div className={styles.about_description}>
             <p>
-              <span>Welcome</span> to my portfolio website! I am a passionate web developer with a focus on creating <span>beautiful</span> and <span>seamless UI</span>. My current tech stack includes: <span>React</span>.js, <span>Express</span>.js, <span>PostgreSQL</span>, <span>Node</span>.js, <span>CSS/SCSS</span> and <span>HTML5</span>.<br /><br />After graduating university with a degree in <span>Software Engineering</span>, I took on a <span>full-stack</span> web development course at La Fosse Academy where I discovered my passion for web development. I hope to develop websites that will make a <span>positive</span> impact on people's lives.
+              Welcome to my portfolio website! I am a passionate web developer with a focus on creating beautiful and seamless UI. My current tech stack includes: <span>React</span>.js, <span>Express</span>.js, <span>PostgreSQL</span>, <span>Node</span>.js, <span>CSS/SCSS</span> and <span>HTML5</span>.<br /><br />After graduating university with a degree in Software Engineering, I took on a full-stack web development course at La Fosse Academy where I discovered my passion for web development. I hope to develop websites that will make a positive impact on people's lives.
             </p>
           </div>
       </div>

@@ -1,15 +1,16 @@
 @import '../../sass/variables.scss';
 
 .projects {
-    height: 100vh;
+    min-height: 100vh;
     background-color: $color-grey-dark;
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 
     h2 {
         font-size: 8rem;
-        margin-top: 10rem;
+        margin: 10rem 0;
     }
 }
