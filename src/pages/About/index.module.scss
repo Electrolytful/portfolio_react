@@ -1,8 +1,9 @@
 @import '../../sass/variables.scss';
 
 .about {
-    height: 70vh;
+    height: 80vh;
     background-color: $color-grey-dark;
+    position: relative;
 
     display: flex;
     flex-direction: column;
@@ -13,11 +14,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
-        hr {
-            min-width: 35rem;
-            transform: rotate(90deg);
-        }
+        gap: 25rem;
     }
 
     &_title {
@@ -36,53 +33,93 @@
     &_description {
         max-width: 40%;
 
+        display: flex;
+        flex-direction: column;
+        gap: 5.5rem;
+
         p {
             font-size: 2rem;
         }
     }
+
+    &_stack {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10rem;
+
+        p {
+            border-right: 1px solid $color-white;
+            padding-right: 4rem;
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+
+            font-size: 3.5rem;
+        }
+    }
 }
 
-@media (max-width: 1100px) {
+.icon {
+
+    &_react {
+        color: $color-react;
+    }
+
+    &_js {
+        color: $color-js;
+    }
+
+    &_html {
+        color: $color-html;
+    }
+
+    &_css {
+        color: $color-css;
+    }
+
+    &_sass {
+        color: $color-sass;
+    }
+}
+
+@media (max-width: 1020px) {
     .about {
 
         &_content {
-
-            hr {
-                min-width: 25rem;
-            }
+            flex-direction: column;
+            gap: 7rem;
         }
 
         &_title {
 
             h2 {
-                font-size: 5rem;
+
+                span {
+                    display: inline;
+                }
             }
         }
 
         &_description {
+            max-width: 80%;
+            gap: 10rem;
 
             p {
-                font-size: 1.5rem;
+                text-align: center;
             }
         }
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 650px) {
     .about {
 
-        &_content {
-            flex-direction: column;
-
-            hr {
-                transform: rotate(0);
-                min-width: 25rem;
-                margin-bottom: 4rem;
-            }
-        }
-
         &_title {
-            margin-bottom: 2rem;
 
             h2 {
                 font-size: 5rem;
@@ -94,11 +131,29 @@
         }
 
         &_description {
-            max-width: 80%;
 
             p {
-                font-size: 1.5rem;
-                text-align: center;
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .about {
+
+        &_description {
+            gap: 4.5rem;
+        }
+
+        &_stack {
+            flex-direction: column;
+            gap: 5rem;
+
+            p {
+                border-bottom: 1px solid $color-white;
+                border-right: 0;
+                padding: 0 0 1.5rem 0;
             }
         }
     }

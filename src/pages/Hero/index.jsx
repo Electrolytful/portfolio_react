@@ -14,7 +14,7 @@ export default function Hero() {
       <div className={`${styles.hero_content} ${contentLoaded ? styles.hero_content___visible : ''}`}>
         <img src="images/hero_picture.jpg" alt="Picture of me" />
         <h1>Erhan Ulusal</h1>
-        <h2>Web Developer</h2>
+        <h2>Frontend Web Developer</h2>
         <ul className={styles.hero_icons}>
           <li onClick={() => window.open("https://twitter.com/electrolytful", "_blank")}>
             <i className="fa-brands fa-twitter"></i>

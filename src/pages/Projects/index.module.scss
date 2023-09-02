@@ -1,7 +1,7 @@
 @import '../../sass/variables.scss';
 
 .projects {
-    min-height: 100vh;
+    position: relative;
     background-color: $color-grey-dark;
 
     display: flex;

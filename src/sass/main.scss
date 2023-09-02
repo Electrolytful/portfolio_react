@@ -21,6 +21,19 @@ body {
     color: $color-white;
 }
 
+section {
+    z-index: 10;
+
+    &::after {
+        content: "";
+        width: 60%;
+        height: 100%;
+        position: absolute;
+        border-bottom: 1px solid $color-white;
+        z-index: -1;
+    }
+}
+
 // default styles for headings
 h1 {
     font-size: 6rem;
@@ -39,6 +52,10 @@ h3 {
 
 span {
     color: $color-primary;
+}
+
+ul {
+    list-style: none;
 }
 
 // wrapper for scrolling context - used for the parallax effect in header
