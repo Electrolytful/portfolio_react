@@ -1,0 +1,14 @@
+@import '../../sass/variables.scss';
+
+.skill {
+    background-color: $color-grey-dark;
+    color: $color-white;
+    font-size: 1.5rem;
+    padding: 1.5rem 2rem;
+    border-radius: .5rem;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}

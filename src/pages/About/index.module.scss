@@ -1,7 +1,7 @@
 @import '../../sass/variables.scss';
 
 .about {
-    height: 80vh;
+    height: 70vh;
     background-color: $color-grey-dark;
     position: relative;
 
@@ -142,13 +142,17 @@
 @media (max-width: 550px) {
     .about {
 
+        &_content {
+            gap: 3.5rem;
+        }
+
         &_description {
             gap: 4.5rem;
         }
 
         &_stack {
             flex-direction: column;
-            gap: 5rem;
+            gap: 3rem;
 
             p {
                 border-bottom: 1px solid $color-white;

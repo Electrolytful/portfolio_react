@@ -5,31 +5,10 @@ export default function ProjectList() {
   const DUMMY_DATA = [
     {
       id: 1,
-      title: "Title 1",
-      details: "Details 1",
-      skills: ["Skill 1", "Skill 2", "Skill 3"],
-      picture_url: "images/hero_bg.jpg",
-    },
-    {
-      id: 2,
-      title: "Title 2",
-      details: "Details 2",
-      skills: ["Skill 1", "Skill 2", "Skill 3"],
-      picture_url: "images/hero_bg.jpg",
-    },
-    {
-      id: 3,
-      title: "Title 3",
-      details: "Details 3",
-      skills: ["Skill 1", "Skill 2", "Skill 3"],
-      picture_url: "images/hero_bg.jpg",
-    },
-    {
-      id: 4,
-      title: "Title 4",
-      details: "Details 4",
-      skills: ["Skill 1", "Skill 2", "Skill 3"],
-      picture_url: "images/hero_bg.jpg",
+      title: "Natours",
+      details: "A touring website built for people with a sense of adventure. The site showcases different tours that the customer can book as well as other customer reviews from people that have been on the different tours.",
+      skills: ["Sass", "CSS", "HTML"],
+      picture_url: "images/natours.JPG",
     },
   ];
 
