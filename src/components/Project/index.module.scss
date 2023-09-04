@@ -82,8 +82,9 @@
     }
 
     &_details {
-        width: 90%;
-        padding: 3rem;
+        max-width: 90%;
+        max-height: 40%;
+        padding: 1.5rem 3rem;
         text-align: start;
         background-color: darken($color-grey-light, 35);
         border-radius: 1rem;
@@ -116,6 +117,6 @@
 
         display: flex;
         justify-content: center;
-        gap: 10rem;
+        gap: 5rem;
     }
 }

@@ -1,7 +1,9 @@
 import styles from "./index.module.scss";
 import Skill from "../Skill";
+import ButtonGit from "../ButtonGit";
+import ButtonLive from "../ButtonLive";
 
-export default function Project({ title, details, skills, picture_url }) {
+export default function Project({ title, details, skills, picture_url, git_link }) {
   return (
     <div className={styles.project}>
       <div className={`${styles.project_side} ${styles.project_side___front}`}>
@@ -26,8 +28,8 @@ export default function Project({ title, details, skills, picture_url }) {
           </ul>
         </div>
         <div className={styles.project_buttons}>
-          <p>Button 1</p>
-          <p>Button 2</p>
+          <ButtonGit link={git_link} />
+          <ButtonLive />
         </div>
       </div>
     </div>
