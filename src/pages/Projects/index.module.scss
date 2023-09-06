@@ -1,9 +1,10 @@
 @import '../../sass/variables.scss';
 
 .projects {
-    min-height: 70vh;
-    position: relative;
-    background-color: $color-grey-dark;
+    background-image: url(images/projects.png);
+    background-repeat: no-repeat;
+    background-size: 500px;
+    background-position: right 5% bottom 10%;
 
     display: flex;
     flex-direction: column;
@@ -12,5 +13,14 @@
     h2 {
         font-size: 8rem;
         margin: 10rem 0;
+    }
+}
+
+@media (max-width: 425px) {
+    .projects {
+
+        h2 {
+            font-size: 5rem;
+        }
     }
 }

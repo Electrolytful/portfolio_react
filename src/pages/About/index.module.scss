@@ -1,10 +1,6 @@
 @import '../../sass/variables.scss';
 
 .about {
-    min-height: 70vh;
-    background-color: $color-grey-dark;
-    position: relative;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -122,7 +118,6 @@
         &_title {
 
             h2 {
-                font-size: 5rem;
 
                 span {
                     display: inline;
@@ -158,6 +153,18 @@
                 border-bottom: 1px solid $color-white;
                 border-right: 0;
                 padding: 0 0 1.5rem 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .about {
+
+        &_title {
+
+            h2 {
+                font-size: 5rem;
             }
         }
     }
