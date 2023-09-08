@@ -1,12 +1,12 @@
 .contact {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 
     &_content {
         max-width: fit-content;
         padding: 3rem;
+        margin-top: 10rem;
 
         display: flex;
         flex-direction: column;
@@ -37,20 +37,29 @@
     }
 }
 
-@media (max-width: 700px) {
+@media (width < 700px) {
     .contact {
 
         &_boxes {
             flex-direction: column;
+            margin-left: 3rem;
             gap: 5rem;
         }
     }
 }
 
-@media (max-width: 620px) {
+@media (width < 620px) {
     .contact {
 
+        &_content {
+            margin-top: 0;
+        }
+
         &_title {
+
+            h2 {
+                text-align: center;
+            }
 
             p {
                 font-size: 1.5rem;
@@ -59,13 +68,17 @@
     }
 }
 
-@media (max-width: 425px) {
+@media (width < 425px) {
     .contact {
 
         &_title {
 
             h2 {
                 font-size: 5rem;
+            }
+
+            p {
+                text-align: center;
             }
         }
     }

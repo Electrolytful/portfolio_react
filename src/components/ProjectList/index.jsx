@@ -1,7 +1,7 @@
 import styles from "./index.module.scss";
 import Project from "../Project";
 
-import { useProject } from '../../context/projectContext';
+import { useProject } from "../../context/projectContext";
 
 export default function ProjectList() {
   const projectCtx = useProject();

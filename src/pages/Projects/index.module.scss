@@ -16,7 +16,7 @@
     }
 }
 
-@media (max-width: 425px) {
+@media (width < 425px) {
     .projects {
 
         h2 {

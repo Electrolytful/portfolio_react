@@ -83,7 +83,7 @@
     }
 }
 
-@media (max-width: 1020px) {
+@media (width < 1020px) {
     .about {
 
         &_content {
@@ -112,7 +112,7 @@
     }
 }
 
-@media (max-width: 650px) {
+@media (width < 650px) {
     .about {
 
         &_title {
@@ -134,7 +134,7 @@
     }
 }
 
-@media (max-width: 550px) {
+@media (width < 550px) {
     .about {
 
         &_content {
@@ -158,8 +158,12 @@
     }
 }
 
-@media (max-width: 425px) {
+@media (width < 425px) {
     .about {
+
+        &_content {
+            margin-top: 5rem;
+        }
 
         &_title {
 

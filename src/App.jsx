@@ -1,9 +1,4 @@
-import {
-  Hero,
-  About,
-  Projects,
-  Contact,
-} from "./pages";
+import { Hero, About, Projects, Contact, Footer } from "./pages";
 
 import { ProjectContextProvider } from "./context/projectContext";
 
@@ -15,6 +10,7 @@ export default function App() {
         <About />
         <Projects />
         <Contact />
+        <Footer />
       </div>
     </ProjectContextProvider>
   );
