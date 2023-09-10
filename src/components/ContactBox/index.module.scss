@@ -1,9 +1,9 @@
-@import '../../sass/variables.scss';
+@import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
 
 .contact {
+    @include flex(1rem);
     min-width: 20%;
-    display: flex;
-    gap: 1rem;
 
     i {
         font-size: 5rem;
@@ -13,14 +13,11 @@
         border-radius: 50%;
         padding: 2rem;
         background-color: $color-grey-dark-icon;
-        box-shadow: 0 0 1rem rgba($color-black, .15);
+        box-shadow: $small-box-shadow;
     }
 
     &_content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 1rem;
+        @include flex-vertical-justify-center(1rem);
 
         p {
             font-size: 2rem;

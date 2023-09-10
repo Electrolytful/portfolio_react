@@ -1,18 +1,8 @@
-@import '../../sass/variables.scss';
+@import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
 
 .btn {
-    background-color: $color-grey-dark;
-    color: $color-white;
-    font-size: 1.8rem;
-    padding: 1.7rem 2rem;
-    border-radius: 1.4rem;
-    border: 1px solid transparent;
-    cursor: pointer;
-
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-
+    @include btnLayout($color-grey-dark, transparent);
     transition: all .3s;
 
     &:hover {

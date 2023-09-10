@@ -1,17 +1,14 @@
+@import "../../sass/mixins.scss";
+
 .contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-vertical-align-center(0);
 
     &_content {
+        @include flex-vertical-justify-start(5rem);
+
         max-width: fit-content;
         padding: 3rem;
-        margin-top: 20rem;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        gap: 5rem;
+        margin-top: 15rem;
 
         opacity: 0;
         transform: translate3d(15%, 0, 0);
@@ -24,10 +21,7 @@
     }
 
     &_title {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 2rem;
+        @include flex-vertical-justify-center(2rem);
 
         h2 {
             font-size: 6rem;
@@ -41,8 +35,7 @@
     }
 
     &_boxes {
-        display: flex;
-        gap: 20rem;
+        @include flex(20rem);
     }
 }
 
@@ -62,7 +55,7 @@
         justify-content: center;
 
         &_content {
-            margin-top: 0;
+            margin-top: -10rem;
         }
 
         &_title {

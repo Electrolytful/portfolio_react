@@ -1,23 +1,18 @@
-@import '../../sass/variables.scss';
+@import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
 
 .footer {
+    @include flex-justify-sa-align-center(0);
+
     min-width: 100vw;
     height: 15vh;
     background: linear-gradient(to right bottom,
         rgba($color-primary, .9),
         rgba($color-primary-dark, .9));
 
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
     &_icons {
+        @include flex-justify-align-center(7rem);
         font-size: 4rem;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 7rem;
 
         i {
             transition: all .4s;

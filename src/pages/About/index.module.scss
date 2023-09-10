@@ -1,16 +1,11 @@
-@import '../../sass/variables.scss';
+@import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
 
 .about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex-vertical-justify-align-center(0);
 
     &_content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 25rem;
+        @include flex-justify-align-center(25rem);
 
         opacity: 0;
         transform: translate3d(-15%, 0, 0);
@@ -36,11 +31,8 @@
     }
 
     &_description {
+        @include flex-vertical(5.5rem);
         max-width: 40%;
-
-        display: flex;
-        flex-direction: column;
-        gap: 5.5rem;
 
         p {
             font-size: 2rem;
@@ -48,10 +40,7 @@
     }
 
     &_stack {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10rem;
+        @include flex-justify-align-center(10rem);
 
         p {
             border-right: 1px solid $color-white;
@@ -59,11 +48,7 @@
         }
 
         ul {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 4rem;
-
+            @include flex-justify-align-center(4rem);
             font-size: 3.5rem;
         }
     }

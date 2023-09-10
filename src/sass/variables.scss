@@ -1,5 +1,5 @@
 // imports
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap");
 
 // colors
 $color-primary: #2C4FF4;
@@ -23,3 +23,15 @@ $color-sass: #cc6699;
 
 // fonts
 $main-font: 'Montserrat', sans-serif;
+
+// box shadows
+$small-box-shadow: 0 0 1rem rgba($color-black, .15);
+$big-box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+// scrollbar
+$scrollbar-width: 1.5rem;
+$track-color: $color-grey-dark;
+$thumb-color: linear-gradient(180deg,
+    rgba($color-primary, .8),
+    rgba($color-primary-dark, .8));
+$thumb-border-color: $color-grey-dark;

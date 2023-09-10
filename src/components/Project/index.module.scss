@@ -1,4 +1,5 @@
-@import '../../sass/variables.scss';
+@import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
 
 .project {
     // FUNCTIONALITY
@@ -16,29 +17,23 @@
         top: 0;
         left: 0;
         border-radius: 3px;
-        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        box-shadow: $big-box-shadow;
         overflow: hidden;
 
         &___front {
+            @include flex-vertical-align-center(3%);
+
             background-color: $color-grey-dark;
             border: 2px solid $color-grey-light;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 3%;
         }
 
         &___back {
+            @include flex-vertical-justify-center(10%);
+
             transform: rotateY(-180deg);
             background-image: linear-gradient(to right bottom,
                     $color-primary-light,
                     $color-primary-dark);
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 10%;
         }
     }
 
@@ -57,9 +52,7 @@
         height: 23rem;
 
         img {
-            object-fit: cover;
-            height: 100%;
-            width: 100%;
+            @include fill;
         }
     }
 
@@ -89,24 +82,18 @@
         padding: 3rem;
 
         ul {
+            @include flex-justify-align-center-wrap(2rem);
+
             width: 100%;
             margin: 0 auto;
-
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
         }
     }
 
     &_buttons {
+        @include flex-justify-center(5rem);
+
         min-width: 80%;
         padding: 3rem;
-
-        display: flex;
-        justify-content: center;
-        gap: 5rem;
     }
 }
 

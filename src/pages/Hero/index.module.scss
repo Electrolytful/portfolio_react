@@ -1,4 +1,5 @@
-@import '../../sass/variables.scss';
+@import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
 
 .hero {
     width: 100%;
@@ -9,8 +10,8 @@
     z-index: -1;
 
     &_background {
-        width: 100%;
-        height: 100%;
+        @include fill;
+
         background-image: linear-gradient(to right bottom,
         rgba($color-primary-dark, .8),
         rgba($color-primary-light, .8)),
@@ -23,24 +24,17 @@
         &::after {
             content: "";
             position: absolute;
-            width: 100%;
-            height: 100%;
             backdrop-filter: blur(.6rem);
+
+            @include fill;
         }
     }
 
     &_content {
-        width: 100%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) translate3d(0, 10rem, -.2rem);
+        @include flex-vertical-justify-align-center(3rem);
+        @include absolute-center-hero;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 3rem;
+        width: 100%;
 
         opacity: 0;
         transition: all 2s;
@@ -51,10 +45,7 @@
         }
 
         img {
-            max-width: 20rem;
-            aspect-ratio: 1 / 1;
-            object-fit: cover;
-            border-radius: 50%;
+            @include img-circle(20rem);
         }
 
         h2 {
@@ -63,10 +54,7 @@
     }
 
     &_icons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 5rem;
+        @include flex-justify-align-center(5rem);
         font-size: 4rem;
 
         li {
