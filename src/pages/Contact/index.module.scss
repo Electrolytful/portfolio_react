@@ -6,12 +6,21 @@
     &_content {
         max-width: fit-content;
         padding: 3rem;
-        margin-top: 10rem;
+        margin-top: 20rem;
 
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         gap: 5rem;
+
+        opacity: 0;
+        transform: translate3d(15%, 0, 0);
+        transition: all 2s;
+    }
+
+    &_content___visible {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
     }
 
     &_title {
@@ -50,6 +59,7 @@
 
 @media (width < 620px) {
     .contact {
+        justify-content: center;
 
         &_content {
             margin-top: 0;
@@ -80,6 +90,16 @@
             p {
                 text-align: center;
             }
+        }
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .contact {
+
+        &_content {
+            transform: translate3d(0, 0, 0);
+            transition: none;
         }
     }
 }

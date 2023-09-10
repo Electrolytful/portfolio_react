@@ -19,10 +19,11 @@ body {
     scroll-behavior: smooth;
     font-family: $main-font;
     color: $color-white;
+    background-color: $color-grey-dark;
 }
 
 section {
-    min-height: 70vh;
+    min-height: 90vh;
     background-color: $color-grey-dark;
     position: relative;
 }
@@ -50,16 +51,11 @@ h2 {
     font-weight: 100;
 }
 
-h3 {
-    font-size: 2rem;
-    font-weight: 100;
-}
-
 // wrapper for scrolling context - used for the parallax effect in header
 .wrapper {
     height: 100vh;
-    overflow-y: auto;
     overflow-x: hidden;
+    overflow-y: auto;
     perspective: 1rem;
 }
 

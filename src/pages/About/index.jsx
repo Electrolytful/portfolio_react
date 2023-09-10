@@ -1,9 +1,19 @@
 import styles from "./index.module.scss";
+import { useInView } from "react-intersection-observer";
 
 export default function About() {
+  const { ref: contentRef, inView: contentInView } = useInView({
+    triggerOnce: true,
+  });
+
   return (
     <section className={styles.about}>
-      <div className={styles.about_content}>
+      <div
+        ref={contentRef}
+        className={`${styles.about_content} ${
+          contentInView ? styles.about_content___visible : ""
+        }`}
+      >
         <div className={styles.about_title}>
           <h2>
             About <span>Me</span>

@@ -47,7 +47,7 @@
 
         &___visible {
             opacity: 1;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%) translate3d(0, 0, 0);
         }
 
         img {
@@ -120,6 +120,16 @@
 
         &_icons {
             font-size: 3rem;
+        }
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .hero {
+
+        &_content {
+            transform: translate(-50%, -50%) translate3d(0, 0, 0);
+            transition: none;
         }
     }
 }

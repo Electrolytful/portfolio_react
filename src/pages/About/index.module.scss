@@ -11,6 +11,15 @@
         justify-content: center;
         align-items: center;
         gap: 25rem;
+
+        opacity: 0;
+        transform: translate3d(-15%, 0, 0);
+        transition: all 2s;
+    }
+
+    &_content___visible {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
     }
 
     &_title {
@@ -170,6 +179,16 @@
             h2 {
                 font-size: 5rem;
             }
+        }
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .about {
+
+        &_content {
+            transform: translate3d(0, 0, 0);
+            transition: none;
         }
     }
 }
