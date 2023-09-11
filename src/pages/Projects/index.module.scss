@@ -4,7 +4,7 @@
 .projects {
     @include flex-vertical-align-center(0);
 
-    background-image: url(images/projects.png);
+    background-image: url("/images/projects.png");
     background-repeat: no-repeat;
     background-size: 500px;
     background-position: right 5% bottom 10%;
