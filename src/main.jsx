@@ -3,4 +3,10 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./sass/main.scss";
 
-ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+import { ProjectContextProvider } from "./context/projectContext";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <ProjectContextProvider>
+    <App />
+  </ProjectContextProvider>
+);

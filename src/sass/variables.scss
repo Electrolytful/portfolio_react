@@ -21,6 +21,16 @@ $color-html: #e34c26;
 $color-css: #264de4;
 $color-sass: #cc6699;
 
+$track-color: $color-grey-dark;
+$thumb-color: linear-gradient(180deg,
+    rgba($color-primary, .8),
+    rgba($color-primary-dark, .8));
+$thumb-border-color: $color-grey-dark;
+
+$scroll-button-color: linear-gradient(to bottom right,
+    rgba($color-primary, 1),
+    rgba($color-primary-light, 1));
+
 // fonts
 $main-font: 'Montserrat', sans-serif;
 
@@ -30,8 +40,3 @@ $big-box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
 
 // scrollbar
 $scrollbar-width: 1.5rem;
-$track-color: $color-grey-dark;
-$thumb-color: linear-gradient(180deg,
-    rgba($color-primary, .8),
-    rgba($color-primary-dark, .8));
-$thumb-border-color: $color-grey-dark;

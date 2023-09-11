@@ -4,3 +4,4 @@ export { default as Skill } from './Skill';
 export { default as ButtonGit } from './ButtonGit';
 export { default as ButtonLive } from './ButtonLive';
 export { default as ContactBox } from './ContactBox';
+export { default as BackToTopButton } from './BackToTopButton';
