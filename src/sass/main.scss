@@ -1,0 +1,57 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+// main styling for website
+*,
+*::before,
+*::after {
+    @include universal;
+}
+
+html {
+    // global definition setting for 1rem (10px)
+    font-size: 62.5%;
+}
+
+body {
+    @include body($color-white, $color-grey-dark, $main-font);
+}
+
+section {
+    min-height: 90vh;
+    background-color: $color-grey-dark;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+span {
+    color: $color-primary;
+}
+
+ul {
+    list-style: none;
+}
+
+// default styles for headings
+h1 {
+    font-size: 6rem;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 3.5rem;
+    font-weight: 100;
+}
+
+// wrapper for scrolling context - used for the parallax effect in hero section
+.wrapper {
+    @include user-perspective(1rem);
+}
+
+// scrollbar styling
+@media (width > 420px) {
+    @include scrollbar-settings($scrollbar-width, $track-color, $thumb-color, $thumb-border-color);
+}

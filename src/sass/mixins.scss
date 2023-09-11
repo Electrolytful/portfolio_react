@@ -1,0 +1,175 @@
+// general mixins
+// make element fill the entire container
+@mixin fill {
+    width: 100%;
+    height: 100%;
+}
+
+// universal selector rules
+@mixin universal {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+// general body rules
+@mixin body($color, $background-color, $font) {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: $color;
+    background-color: $background-color;
+    font-family: $font;
+}
+
+// create a perfect circle around an img/element
+@mixin img-circle($max-width) {
+    max-width: $max-width;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+// center absolutly positioned element
+@mixin absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin absolute-center-hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translate3d(0, 10rem, -.2rem);
+}
+
+// adding a perspective to the user, used for parallax effect
+@mixin user-perspective($perspective) {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: $perspective;
+}
+
+
+// scrollbar mixins
+@mixin scrollbar-settings($width, $track-color, $thumb-color, $thumb-border-color) {
+    ::-webkit-scrollbar {
+        width: $width;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: $track-color;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: $thumb-color;
+        border-radius: 100vw;
+        border: .3rem solid $thumb-border-color;
+    }
+}
+
+
+
+// button mixins
+@mixin scroll-button-position {
+    position: fixed;
+    bottom: 20%;
+    right: 10%;
+
+}
+
+@mixin btnLayout($bg-color, $border-color) {
+    @include flex-justify-center(1rem);
+
+    background-color: $bg-color;
+    color: $color-white;
+    font-size: 1.8rem;
+    padding: 1.7rem 2rem;
+    border-radius: 1.4rem;
+    border: 1px solid $border-color;
+    cursor: pointer;
+}
+
+
+
+// flexbox mixins
+@mixin flex($gap) {
+    display: flex;
+    gap: $gap;
+}
+
+@mixin flex-justify-center($gap) {
+    display: flex;
+    justify-content: center;
+    gap: $gap;
+}
+
+@mixin flex-justify-align-center($gap) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $gap;
+}
+
+@mixin flex-justify-align-center-wrap($gap) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: $gap;
+}
+
+@mixin flex-justify-sa-align-center($gap) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: $gap;
+}
+
+@mixin flex-vertical($gap) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
+@mixin flex-vertical-justify-center($gap) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: $gap;
+}
+
+@mixin flex-vertical-justify-start($gap) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: $gap;
+}
+
+@mixin flex-vertical-align-center($gap) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $gap;
+}
+
+@mixin flex-vertical-justify-align-center($gap) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: $gap;
+}
+
+
+
+// grid mixins
+@mixin grid-autofit-justify-align-center($min-width, $max-width, $gap) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($min-width, $max-width));
+    justify-content: center;
+    align-items: center;
+    gap: $gap;
+}

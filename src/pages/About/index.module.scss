@@ -1,0 +1,179 @@
+@import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
+
+.about {
+    @include flex-vertical-justify-align-center(0);
+
+    &_content {
+        @include flex-justify-align-center(25rem);
+
+        opacity: 0;
+        transform: translate3d(-15%, 0, 0);
+        transition: all 2s;
+    }
+
+    &_content___visible {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+
+    &_title {
+        text-align: center;
+
+        h2 {
+            font-size: 8rem;
+
+            span {
+                display: block;
+                text-align: right;
+            }
+        }
+    }
+
+    &_description {
+        @include flex-vertical(5.5rem);
+        max-width: 40%;
+
+        p {
+            font-size: 2rem;
+        }
+    }
+
+    &_stack {
+        @include flex-justify-align-center(10rem);
+
+        p {
+            border-right: 1px solid $color-white;
+            padding-right: 4rem;
+        }
+
+        ul {
+            @include flex-justify-align-center(4rem);
+            font-size: 3.5rem;
+        }
+    }
+}
+
+.icon {
+
+    &_react {
+        color: $color-react;
+    }
+
+    &_js {
+        color: $color-js;
+    }
+
+    &_html {
+        color: $color-html;
+    }
+
+    &_css {
+        color: $color-css;
+    }
+
+    &_sass {
+        color: $color-sass;
+    }
+}
+
+@media (width < 1020px) {
+    .about {
+
+        &_content {
+            flex-direction: column;
+            gap: 7rem;
+        }
+
+        &_title {
+
+            h2 {
+
+                span {
+                    display: inline;
+                }
+            }
+        }
+
+        &_description {
+            max-width: 80%;
+            gap: 10rem;
+
+            p {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (width < 650px) {
+    .about {
+
+        &_title {
+
+            h2 {
+
+                span {
+                    display: inline;
+                }
+            }
+        }
+
+        &_description {
+
+            p {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+@media (width < 550px) {
+    .about {
+
+        &_content {
+            gap: 3.5rem;
+        }
+
+        &_description {
+            gap: 4.5rem;
+        }
+
+        &_stack {
+            flex-direction: column;
+            gap: 3rem;
+
+            p {
+                border-bottom: 1px solid $color-white;
+                border-right: 0;
+                padding: 0 0 1.5rem 0;
+            }
+        }
+    }
+}
+
+@media (width < 425px) {
+    .about {
+
+        &_content {
+            margin-top: 5rem;
+        }
+
+        &_title {
+
+            h2 {
+                font-size: 5rem;
+            }
+        }
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .about {
+
+        &_content {
+            transform: translate3d(0, 0, 0);
+            transition: none;
+        }
+    }
+}

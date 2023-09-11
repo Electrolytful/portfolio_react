@@ -1,0 +1,98 @@
+@import "../../sass/mixins.scss";
+
+.contact {
+    @include flex-vertical-align-center(0);
+
+    &_content {
+        @include flex-vertical-justify-start(5rem);
+
+        max-width: fit-content;
+        padding: 3rem;
+        margin-top: 15rem;
+
+        opacity: 0;
+        transform: translate3d(15%, 0, 0);
+        transition: all 2s;
+    }
+
+    &_content___visible {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+
+    &_title {
+        @include flex-vertical-justify-center(2rem);
+
+        h2 {
+            font-size: 6rem;
+        }
+
+        p {
+            font-size: 2rem;
+            font-weight: 100;
+            margin-left: .6rem;
+        }
+    }
+
+    &_boxes {
+        @include flex(20rem);
+    }
+}
+
+@media (width < 700px) {
+    .contact {
+
+        &_boxes {
+            flex-direction: column;
+            margin-left: 3rem;
+            gap: 5rem;
+        }
+    }
+}
+
+@media (width < 620px) {
+    .contact {
+        justify-content: center;
+
+        &_content {
+            margin-top: -10rem;
+        }
+
+        &_title {
+
+            h2 {
+                text-align: center;
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+@media (width < 425px) {
+    .contact {
+
+        &_title {
+
+            h2 {
+                font-size: 5rem;
+            }
+
+            p {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .contact {
+
+        &_content {
+            transform: translate3d(0, 0, 0);
+            transition: none;
+        }
+    }
+}

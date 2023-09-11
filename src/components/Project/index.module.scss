@@ -1,0 +1,110 @@
+@import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
+
+.project {
+    // FUNCTIONALITY
+    position: relative;
+    height: 52rem;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+
+    &_side {
+        height: 52rem;
+        width: 100%;
+        backface-visibility: hidden;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 3px;
+        box-shadow: $big-box-shadow;
+        overflow: hidden;
+
+        &___front {
+            @include flex-vertical-align-center(3%);
+
+            background-color: $color-grey-dark;
+            border: 2px solid $color-grey-light;
+        }
+
+        &___back {
+            @include flex-vertical-justify-center(10%);
+
+            transform: rotateY(-180deg);
+            background-image: linear-gradient(to right bottom,
+                    $color-primary-light,
+                    $color-primary-dark);
+        }
+    }
+
+    &:hover &_side___front {
+        transform: rotateY(180deg);
+    }
+
+    &:hover &_side___back {
+        transform: rotateY(0);
+    }
+
+    // FRONT SIDE STYLING
+    &_picture {
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        position: relative;
+        height: 23rem;
+
+        img {
+            @include fill;
+        }
+    }
+
+    &_title {
+        font-size: 2.8rem;
+        font-weight: 300;
+        color: $color-white;
+    }
+
+    &_details {
+        max-width: 90%;
+        max-height: 40%;
+        padding: 1.5rem 3rem;
+        text-align: start;
+        background-color: darken($color-grey-light, 35);
+        border-radius: 1rem;
+        border: 1px solid $color-grey-light;
+
+        p {
+            font-size: 1.5rem;
+        }
+    }
+
+    // BACK SIDE STYLING
+    &_skills {
+        min-width: 80%;
+        padding: 3rem;
+
+        ul {
+            @include flex-justify-align-center-wrap(2rem);
+
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    &_buttons {
+        @include flex-justify-center(5rem);
+
+        min-width: 80%;
+        padding: 3rem;
+    }
+}
+
+@media (width < 400px) {
+    .project {
+
+        &_details {
+
+            p {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}

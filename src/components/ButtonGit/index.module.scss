@@ -1,0 +1,17 @@
+@import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
+
+.btn {
+    @include btnLayout($color-grey-dark, transparent);
+    transition: all .3s;
+
+    &:hover {
+        background-color: transparent;
+        border: 1px solid $color-white;
+        transform: translateY(-.7rem);
+    }
+
+    &:active {
+        transform: scale(.9);
+    }
+}

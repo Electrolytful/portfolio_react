@@ -1,0 +1,46 @@
+@import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
+
+.footer {
+    @include flex-justify-sa-align-center(0);
+
+    min-width: 100vw;
+    height: 15vh;
+    background: linear-gradient(to right bottom,
+        rgba($color-primary, .9),
+        rgba($color-primary-dark, .9));
+
+    &_icons {
+        @include flex-justify-align-center(7rem);
+        font-size: 4rem;
+
+        i {
+            transition: all .4s;
+            cursor: pointer;
+        }
+
+        i:hover {
+            transform: scale(1.3);
+        }
+    }
+}
+
+@media (width < 890px) {
+    .footer {
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        &_icons {
+            font-size: 3rem;
+        }
+    }
+}
+
+@media (width < 650px) {
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+}

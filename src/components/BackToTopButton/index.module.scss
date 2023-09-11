@@ -1,0 +1,41 @@
+@import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
+
+.btn {
+    @include scroll-button-position;
+
+    padding: 2rem;
+    z-index: 1000;
+    cursor: pointer;
+
+    color: $color-white;
+    background: $scroll-button-color;
+
+    border: none;
+    border-radius: 50%;
+
+    opacity: 0;
+    transform: translate3d(0, 15rem, 0);
+    transition: transform 1s;
+
+    &_icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    i {
+        font-size: 2.5rem;
+    }
+
+    &___visible {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+
+    &:hover {
+        background: transparent;
+        color: $color-primary;
+        border: 1px solid $color-primary;
+    }
+
+}

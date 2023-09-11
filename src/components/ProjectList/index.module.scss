@@ -1,0 +1,39 @@
+@import "../../sass/mixins.scss";
+
+.list {
+    @include grid-autofit-justify-align-center(25rem, 35rem, 10rem);
+
+    width: 80%;
+    margin-bottom: 10rem;
+    z-index: 100;
+
+    &_item {
+        opacity: 0;
+        transform: translate3d(0, 50%, 0);
+        transition: all 2s;
+    }
+
+    &_item___visible {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+// loop giving delayed animation to every child of the project list
+@for $i from 1 to 5 {
+    .list {
+
+        li:nth-child(#{$i}) {
+            transition-delay: #{$i * 200}ms;
+        }
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .list {
+
+        &_item {
+            transition: none;
+        }
+    }
+}

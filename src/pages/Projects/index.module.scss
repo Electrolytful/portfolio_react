@@ -1,0 +1,46 @@
+@import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
+
+.projects {
+    @include flex-vertical-align-center(0);
+
+    background-image: url("/images/projects.png");
+    background-repeat: no-repeat;
+    background-size: 500px;
+    background-position: right 5% bottom 10%;
+
+    h2 {
+        font-size: 8rem;
+        margin: 10rem 0;
+    }
+
+    &_title {
+        opacity: 0;
+        transform: translate3d(0, 75%, 0);
+        transition: all 3s;
+    }
+
+    &_title___visible {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@media (width < 425px) {
+    .projects {
+
+        h2 {
+            font-size: 5rem;
+        }
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .projects {
+
+        &_title {
+            transform: translate3d(0, 0, 0);
+            transition: none;
+        }
+    }
+}

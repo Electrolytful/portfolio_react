@@ -1,0 +1,123 @@
+@import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    user-select: none;
+    transform-style: preserve-3d;
+    z-index: -1;
+
+    &_background {
+        @include fill;
+
+        background-image: linear-gradient(to right bottom,
+        rgba($color-primary-dark, .8),
+        rgba($color-primary-light, .8)),
+        url("/images/hero_bg.jpg");
+        background-size: cover;
+        background-position: top;
+        position: relative;
+        transform: translateZ(-1rem) scale(2.05);
+
+        &::after {
+            content: "";
+            position: absolute;
+            backdrop-filter: blur(.6rem);
+
+            @include fill;
+        }
+    }
+
+    &_content {
+        @include flex-vertical-justify-align-center(3rem);
+        @include absolute-center-hero;
+
+        width: 100%;
+
+        opacity: 0;
+        transition: all 2s;
+
+        &___visible {
+            opacity: 1;
+            transform: translate(-50%, -50%) translate3d(0, 0, 0);
+        }
+
+        img {
+            @include img-circle(20rem);
+        }
+
+        h2 {
+            letter-spacing: .6rem;
+        }
+    }
+
+    &_icons {
+        @include flex-justify-align-center(5rem);
+        font-size: 4rem;
+
+        li {
+            transition: all .4s;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.3);
+            }
+        }
+    }
+}
+
+@media (width < 630px) {
+    .hero {
+
+        &_content {
+
+            h1 {
+                font-size: 5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+
+        &_icons {
+            font-size: 3.5rem;
+        }
+    }
+}
+
+@media (width < 430px) {
+    .hero {
+
+        &_content {
+
+            img {
+                max-width: 15rem;
+            }
+
+            h1 {
+                font-size: 4rem;
+            }
+
+            h2 {
+                font-size: 1.7rem;
+            }
+        }
+
+        &_icons {
+            font-size: 3rem;
+        }
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .hero {
+
+        &_content {
+            transform: translate(-50%, -50%) translate3d(0, 0, 0);
+            transition: none;
+        }
+    }
+}
