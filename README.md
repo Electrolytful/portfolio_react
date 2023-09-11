@@ -3,7 +3,7 @@
 
 <!-- PROJECT LOGO -->
 <p align="center">
-  <img src="./public/images/hero_picture.jpg" alt="project logo" height=250px width=250px aspect-ratio="1 / 1" align="center" />
+  <img src="./public/images/hero_picture.jpg" alt="project logo" height=240px width=250px />
 </p>
 
 
@@ -31,6 +31,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 A personal portfolio website that showcases the different major projects I have undertaken so far throughout my journey as a web developer. The website provides a short section about me as well as a projects section with links to both the github repositories and the live website (if deployed). A short section at the bottom outlines some ways to get in contact with me.
+
+<b>Link to live demo: (project still under development)</b>
 
 <p align="right">(<a href="#readme-top">Back to top</a>)</p>
 
@@ -80,4 +82,3 @@ A personal portfolio website that showcases the different major projects I have 
 
 [Firebase]: https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white
 [Firebase-url]: https://firebase.google.com
-
