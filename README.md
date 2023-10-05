@@ -32,7 +32,7 @@
 ## About The Project
 A personal portfolio website that showcases the different major projects I have undertaken so far throughout my journey as a web developer. The website provides a short section about me as well as a projects section with links to both the github repositories and the live website (if deployed). A short section at the bottom outlines some ways to get in contact with me.
 
-<b>Link to live demo: (project still under development)</b>
+<b>Link to live demo: https://erhanulusaldev.vercel.app</b>
 
 <p align="right">(<a href="#readme-top">Back to top</a>)</p>
 
