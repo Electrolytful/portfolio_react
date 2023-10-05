@@ -13,7 +13,8 @@ export function ProjectContextProvider({ children }) {
         "A touring website built for people with a sense of adventure. The site showcases different tours that the customer can book as well as other customer reviews from people that have been on the different tours.",
       skills: ["Sass", "CSS", "HTML"],
       picture_url: "images/natours.JPG",
-      git_link: "https://github.com/Electrolytful/natours-advanced-css",
+      git_link: "https://github.com/Electrolytful/Natours",
+      live_link: "https://natours-erhandev.vercel.app"
     },
     {
       id: 2,

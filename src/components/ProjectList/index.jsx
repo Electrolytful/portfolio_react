@@ -24,6 +24,7 @@ export default function ProjectList() {
               skills={project.skills}
               picture_url={project.picture_url}
               git_link={project.git_link}
+              live_link={project.live_link}
             />
           </li>
         );

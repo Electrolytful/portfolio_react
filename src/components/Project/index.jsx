@@ -9,6 +9,7 @@ export default function Project({
   skills,
   picture_url,
   git_link,
+  live_link,
 }) {
   return (
     <div className={styles.project}>
@@ -35,7 +36,7 @@ export default function Project({
         </div>
         <div className={styles.project_buttons}>
           <ButtonGit link={git_link} />
-          <ButtonLive />
+          <ButtonLive link={live_link} />
         </div>
       </div>
     </div>
