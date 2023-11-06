@@ -25,6 +25,16 @@ export function ProjectContextProvider({ children }) {
       picture_url: "images/notes_ai.png",
       git_link: "https://github.com/Vitali-G/NotesAI---Client",
     },
+    {
+      id: 3,
+      title: "Trillo",
+      details:
+        "Trillo is an all-in-one booking platform allowing the user to book hotels, flights and tours as well as rent cars during their visit. Undertaken as part of a Advanced CSS course to practice flexbox.",
+      skills: ["Sass", "CSS", "HTML"],
+      picture_url: "images/trillo.png",
+      git_link: "https://github.com/Electrolytful/Trillo",
+      live_link: "https://trillo-erhandev.vercel.app"
+    }
   ]);
 
   const context = {
