@@ -34,7 +34,17 @@ export function ProjectContextProvider({ children }) {
       picture_url: "images/trillo.png",
       git_link: "https://github.com/Electrolytful/Trillo",
       live_link: "https://trillo-erhandev.vercel.app"
-    }
+    },
+    {
+      id: 4,
+      title: "Calc.io",
+      details:
+        "A calculator able to perform basic calculations and save them into a history of calculations for the user to view.",
+      skills: ["React", "Sass", "CSS", "HTML"],
+      picture_url: "images/calc_io.png",
+      git_link: "https://github.com/Electrolytful/Calc.io",
+      live_link: "https://calcio-erhandev.vercel.app"
+    },
   ]);
 
   const context = {

@@ -24,13 +24,6 @@ export default function Hero() {
         <ul className={styles.hero_icons}>
           <li
             onClick={() =>
-              window.open("https://twitter.com/electrolytful", "_blank")
-            }
-          >
-            <i className="fa-brands fa-twitter"></i>
-          </li>
-          <li
-            onClick={() =>
               window.open("https://github.com/Electrolytful", "_blank")
             }
           >
