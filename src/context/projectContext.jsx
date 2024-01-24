@@ -10,7 +10,7 @@ export function ProjectContextProvider({ children }) {
       id: 1,
       title: "Natours",
       details:
-        "A touring website built for people with a sense of adventure. The site showcases different tours that the customer can book as well as other customer reviews from people that have been on the different tours.",
+        "A touring website built for people with a sense of adventure.",
       skills: ["Sass", "CSS", "HTML"],
       picture_url: "images/natours.png",
       git_link: "https://github.com/Electrolytful/Natours",
@@ -18,18 +18,19 @@ export function ProjectContextProvider({ children }) {
     },
     {
       id: 2,
-      title: "NotesAI",
+      title: "Nexter",
       details:
-        "NotesAI allows students to login to their account where they can create and save a note. With ChatGPT integration, users can also highlight a part of text in their note, generating a response from ChatGPT explaining the highlighted word or sentence.",
-      skills: ["React", "CSS", "HTML"],
-      picture_url: "images/notes_ai.png",
-      git_link: "https://github.com/Vitali-G/NotesAI---Client",
+        "A website for a fictional company Nexter, selling luxury homes all across the globe.",
+      skills: ["Sass", "CSS", "HTML"],
+      picture_url: "images/nexter.png",
+      git_link: "https://github.com/Electrolytful/Nexter",
+      live_link: "https://nexter-erhandev.vercel.app"
     },
     {
       id: 3,
       title: "Trillo",
       details:
-        "Trillo is an all-in-one booking platform allowing the user to book hotels, flights and tours as well as rent cars during their visit. Undertaken as part of a Advanced CSS course to practice flexbox.",
+        "Trillo is an all-in-one booking platform helping the user to book hotels, flights and tours as well as rent cars during their visit.",
       skills: ["Sass", "CSS", "HTML"],
       picture_url: "images/trillo.png",
       git_link: "https://github.com/Electrolytful/Trillo",

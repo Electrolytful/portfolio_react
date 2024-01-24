@@ -49,10 +49,11 @@
     &_picture {
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         position: relative;
-        height: 23rem;
+        height: 19rem;
 
         img {
-            @include fill;
+            width: 100%;
+            object-fit: cover;
         }
     }
 
